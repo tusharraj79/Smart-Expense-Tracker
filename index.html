@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="top-section">
+      <div>
+        <h1>💰 Smart Expense Tracker</h1>
+        <p>Track your daily spending easily</p>
+      </div>
+
+      <div class="balance-card">
+        <h2>Total Expense</h2>
+        <h1>₹<span id="total">0</span></h1>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <input type="text" id="title" placeholder="Expense Title">
+
+      <input type="number" id="amount" placeholder="Amount">
+
+      <select id="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Recharge</option>
+        <option>Entertainment</option>
+        <option>Other</option>
+      </select>
+
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <div class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="expense-list">
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="expenseChart"></canvas>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
